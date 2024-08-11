@@ -6,13 +6,13 @@
 
 body {
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 55px;
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
 }
 
 .login-container {
@@ -24,7 +24,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    top: -5%;
+    
 }
 
 .login-left, .login-right {

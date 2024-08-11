@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <div class="login-title">Pradheep Institutions</div>
+            <div class="login-box">
+                <div class="login-header">
+                    <button id="signup-student-btn" class="toggle-btn active">Student</button>
+                    <button id="signup-teacher-btn" class="toggle-btn">Teacher</button>
+                </div>
+                <div id="signup-student-form" class="login-form active">
+                    <h2>Student Sign Up</h2>
+                    <label for="signup-student-name">Name</label>
+                    <input type="text" id="signup-student-name" placeholder="Enter your name">
+                    <label for="signup-student-rollno">Roll Number</label>
+                    <input type="text" id="signup-student-rollno" placeholder="Enter your roll number">
+                    <label for="signup-student-password">Password</label>
+                    <input type="password" id="signup-student-password" placeholder="Set your password">
+                    <label for="signup-student-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-student-confirm-password" placeholder="Confirm your password">
+                    <button class="login-btn">Sign Up</button>
+                </div>
+                <div id="signup-teacher-form" class="login-form">
+                    <h2>Teacher Sign Up</h2>
+                    <label for="signup-teacher-name">Name</label>
+                    <input type="text" id="signup-teacher-name" placeholder="Enter your name">
+                    <label for="signup-teacher-id">Access ID</label>
+                    <input type="text" id="signup-teacher-id" placeholder="Enter your Access ID">
+                    <label for="signup-teacher-password">Password</label>
+                    <input type="password" id="signup-teacher-password" placeholder="Set your password">
+                    <label for="signup-teacher-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-teacher-confirm-password" placeholder="Confirm your password">
+                    <button class="login-btn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="login-right">
+            <img src="assets/pattern2.png" alt="Pattern Image">
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
+
