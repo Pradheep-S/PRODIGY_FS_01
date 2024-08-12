@@ -158,3 +158,6 @@ body {
 .signup-link:hover {
     color: #0056b3;
 }
+.error-message {
+    color: red;
+}

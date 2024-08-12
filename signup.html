@@ -16,29 +16,35 @@
                     <button id="signup-teacher-btn" class="toggle-btn">Teacher</button>
                 </div>
                 <div id="signup-student-form" class="login-form active">
-                    <h2>Student Sign Up</h2>
-                    <label for="signup-student-name">Name</label>
-                    <input type="text" id="signup-student-name" placeholder="Enter your name">
-                    <label for="signup-student-rollno">Roll Number</label>
-                    <input type="text" id="signup-student-rollno" placeholder="Enter your roll number">
-                    <label for="signup-student-password">Password</label>
-                    <input type="password" id="signup-student-password" placeholder="Set your password">
-                    <label for="signup-student-confirm-password">Confirm Password</label>
-                    <input type="password" id="signup-student-confirm-password" placeholder="Confirm your password">
-                    <button class="login-btn">Sign Up</button>
+                    <form id="student-signin-form" method="post">
+                        <h2>Student Sign Up</h2>
+                        <label for="signup-student-name">Name</label>
+                        <input type="text" id="signup-student-name" placeholder="Enter your name" name="signup-student-name" required>
+                        <label for="signup-student-rollno">Roll Number</label>
+                        <input type="text" id="signup-student-rollno" placeholder="Enter your roll number" name="signup-student-rollno" required>
+                        <label for="signup-student-password">Password</label>
+                        <input type="password" id="signup-student-password" placeholder="Set your password" name="signup-student-password" required>
+                        <label for="signup-student-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-student-confirm-password" placeholder="Confirm your password" name="signup-student-confirm-password" required>
+                        <button type="submit" onclick="set('/signin', 'student-signin-form', event)" class="login-btn">Sign Up</button>
+                    </form>
                 </div>
+                
                 <div id="signup-teacher-form" class="login-form">
-                    <h2>Teacher Sign Up</h2>
-                    <label for="signup-teacher-name">Name</label>
-                    <input type="text" id="signup-teacher-name" placeholder="Enter your name">
-                    <label for="signup-teacher-id">Access ID</label>
-                    <input type="text" id="signup-teacher-id" placeholder="Enter your Access ID">
-                    <label for="signup-teacher-password">Password</label>
-                    <input type="password" id="signup-teacher-password" placeholder="Set your password">
-                    <label for="signup-teacher-confirm-password">Confirm Password</label>
-                    <input type="password" id="signup-teacher-confirm-password" placeholder="Confirm your password">
-                    <button class="login-btn">Sign Up</button>
+                    <form id="teacher-signin-form" method="post">
+                        <h2>Teacher Sign Up</h2>
+                        <label for="signup-teacher-name">Name</label>
+                        <input type="text" id="signup-teacher-name" placeholder="Enter your name" name="signup-teacher-name" required>
+                        <label for="signup-teacher-id">Access ID</label>
+                        <input type="text" id="signup-teacher-id" placeholder="Enter your Access ID" name="signup-teacher-id" required>
+                        <label for="signup-teacher-password">Password</label>
+                        <input type="password" id="signup-teacher-password" placeholder="Set your password" name="signup-teacher-password" required>
+                        <label for="signup-teacher-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-teacher-confirm-password" placeholder="Confirm your password" name="signup-teacher-confirm-password" required>
+                        <button class="login-btn" type="submit" onclick="set('/signin', 'teacher-signin-form', event)">Sign Up</button>
+                    </form>
                 </div>
+                
             </div>
         </div>
         <div class="login-right">
@@ -48,4 +54,3 @@
     <script src="signup.js"></script>
 </body>
 </html>
-
