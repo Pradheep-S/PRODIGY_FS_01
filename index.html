@@ -17,23 +17,26 @@
                 </div>
                 <div id="student-form" class="login-form active">
                     <h2>Student Login</h2>
+                <form id="student-login-form" method="post">
                     <label for="roll-number">Roll Number</label>
-                    <input type="text" id="roll-number" placeholder="Enter your roll number">
+                    <input type="text" id="roll-number" placeholder="Enter your roll number" name="roll-number">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password">
-                    <button class="login-btn">Log In</button>
+                    <input type="password" id="password" placeholder="Enter your password" name="password">
+                    <button type="submit" onclick="set('/login', 'student-login-form', event)" class="login-btn">Log In</button>
+                </form>
                     <div class="signup-container">
                         <p>Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
                     </div>
-                    
                 </div>
                 <div id="teacher-form" class="login-form">
                     <h2>Teacher Login</h2>
+                <form id="teacher-login-form" method="post">
                     <label for="teacher-id">Teacher ID</label>
-                    <input type="text" id="teacher-id" placeholder="Enter your teacher ID">
+                    <input type="text" id="teacher-id" placeholder="Enter your teacher ID" name="teacher-id">
                     <label for="access-id">Access ID</label>
-                    <input type="password" id="access-id" placeholder="Enter your access ID" style="width: 350px;">
-                    <button class="login-btn">Log In</button>
+                    <input type="password" id="access-id" name="access-id" placeholder="Enter your access ID" style="width: 350px;">
+                    <button class="login-btn" type="submit" onclick="set('/login', 'teacher-login-form', event)">Log In</button>
+                </form>
                     <div class="signup-container">
                         <p>Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
                     </div>
@@ -44,6 +47,6 @@
             <img src="assets\pattern2.png" alt="Pattern Image">
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
