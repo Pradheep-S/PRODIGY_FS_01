@@ -8,23 +8,22 @@ body {
     overflow: hidden;
     margin-top: 55px;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .login-container {
     display: flex;
     width: 60%;
     max-width: 1200px;
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #1e1e1e; /* Dark card background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    
 }
 
 .login-left, .login-right {
@@ -43,7 +42,7 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
-    color: #333;
+    color: #1ca5f9; /* Retained for title color */
 }
 
 .login-box {
@@ -60,7 +59,7 @@ body {
 .toggle-btn {
     position: relative;
     background-color: transparent;
-    color: #007bff;
+    color: #1ca5f9; /* Light blue color for buttons */
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -69,7 +68,7 @@ body {
 }
 
 .toggle-btn.active, .toggle-btn:hover {
-    color: #0056b3;
+    color: #b5b3b3; /* Light green color on hover */
 }
 
 .toggle-btn::after {
@@ -79,7 +78,7 @@ body {
     bottom: -5px;
     width: 0%;
     height: 3px;
-    background-color: #007bff;
+    background-color: #1ca5f9; /* Blue underline */
     transition: all 0.4s ease;
     transform: translateX(-50%);
 }
@@ -102,26 +101,28 @@ body {
     margin-bottom: 15px;
     font-size: 20px;
     text-align: center;
-    color: #333;
+    color: #ffffff; /* White color for headings */
 }
 
 .login-form label {
     font-size: 14px;
     margin-bottom: 5px;
-    color: #555;
+    color: #e4e4e4; /* Light gray color for labels */
 }
 
 .login-form input {
     margin-bottom: 10px;
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid #444; /* Dark border color */
     border-radius: 4px;
     width: 350px;
+    background-color: #333; /* Dark input background */
+    color: #ffffff; /* White text color */
 }
 
 .login-btn {
-    background-color: #007bff;
+    background-color: #1ca5f9; /* Blue background for button */
     color: white;
     border: none;
     padding: 8px;
@@ -134,7 +135,7 @@ body {
 }
 
 .login-btn:hover {
-    background-color: #0056b3;
+    background-color: #5cb85c; /* Light green color on hover */
 }
 
 .login-right img {
@@ -149,15 +150,16 @@ body {
 }
 
 .signup-link {
-    color: #007bff;
+    color: #1ca5f9; /* Light blue for links */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .signup-link:hover {
-    color: #0056b3;
+    text-decoration: underline;
 }
+
 .error-message {
-    color: red;
+    color: #ff5252; /* Red for error messages */
 }

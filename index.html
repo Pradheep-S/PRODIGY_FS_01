@@ -9,7 +9,11 @@
 <body>
     <div class="login-container">
         <div class="login-left">
-            <div class="login-title">Pradheep Institutions</div>
+            <div class="login-title" style="display: flex; align-items: center; margin-bottom: 0;">
+                <img src="assets/logo.svg" alt="" style="margin-left: 120px;">
+                
+            </div>
+            
             <div class="login-box">
                 <div class="login-header">
                     <button id="student-btn" class="toggle-btn active">Student</button>
@@ -33,8 +37,8 @@
                 <form id="teacher-login-form" method="post">
                     <label for="teacher-id">Teacher ID</label>
                     <input type="text" id="teacher-id" placeholder="Enter your teacher ID" name="teacher-id">
-                    <label for="access-id">Access ID</label>
-                    <input type="password" id="access-id" name="access-id" placeholder="Enter your access ID" style="width: 350px;">
+                    <label for="access-id">Password</label>
+                    <input type="password" id="access-id" name="access-id" placeholder="Enter your password" style="width: 350px;">
                     <button class="login-btn" type="submit" onclick="set('/login', 'teacher-login-form', event)">Log In</button>
                 </form>
                     <div class="signup-container">

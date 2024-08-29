@@ -84,8 +84,43 @@ async function insertStudentData(res, username, rollNo, password) {
         const result = await collection.insertOne(student);
 
         console.log('Student registered successfully');
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('Student registered successfully');
+        res.writeHead(200, { 'Content-Type': 'html' });
+        res.write(`
+            <html>
+                <head>
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+                        
+                        body {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            margin: 0;
+                            background-color: #e3f2fd;
+                            font-family: 'Open Sans', sans-serif;
+                        }
+                        .content {
+                            text-align: center;
+                            color: #0d47a1;
+                        }
+                        .content p {
+                            font-size: 2em;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="content">
+                        <p>Student registered successfully</p>
+                    </div>
+                </body>
+            </html>
+        `);
+        res.end();
+        
+        
     } catch (error) {
         console.error('Error inserting student data:', error);
         res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -102,8 +137,42 @@ async function insertTeacherData(res, name, accessID, password) {
         const result = await collection.insertOne(teacher);
 
         console.log('Teacher registered successfully');
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('Teacher registered successfully');
+        res.writeHead(200, { 'Content-Type': 'html' });
+        res.write(`
+            <html>
+                <head>
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+                        
+                        body {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            margin: 0;
+                            background-color: #e3f2fd;
+                            font-family: 'Open Sans', sans-serif;
+                        }
+                        .content {
+                            text-align: center;
+                            color: #0d47a1;
+                        }
+                        .content p {
+                            font-size: 2em;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="content">
+                        <p>Teacher registered successfully</p>
+                    </div>
+                </body>
+            </html>
+        `);
+        res.end();
+        
     } catch (error) {
         console.error('Error inserting teacher data:', error);
         res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -120,12 +189,80 @@ async function authenticateStudent(res, rollNo, password) {
 
         if (student) {
             console.log('Student authenticated successfully');
-            res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end('Student authenticated successfully');
+            res.writeHead(200, { 'Content-Type': 'html' });
+            res.write(`
+                <html>
+                    <head>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+                            
+                            body {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                margin: 0;
+                                background-color: #e3f2fd;
+                                font-family: 'Open Sans', sans-serif;
+                            }
+                            .content {
+                                text-align: center;
+                                color: #0d47a1;
+                            }
+                            .content p {
+                                font-size: 2em;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="content">
+                            <p>Student authenticated successfully.</p>
+                        </div>
+                    </body>
+                </html>
+            `);
+            res.end();
+            
         } else {
             console.log('Authentication failed for student');
-            res.writeHead(401, { 'Content-Type': 'text/plain' });
-            res.end('Authentication failed');
+            res.writeHead(401, { 'Content-Type': 'html' });
+            res.write(`
+                <html>
+                    <head>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+                            
+                            body {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                margin: 0;
+                                background-color: #ffebee; /* Light red background */
+                                font-family: 'Open Sans', sans-serif;
+                            }
+                            .content {
+                                text-align: center;
+                                color: #c62828; /* Dark red color */
+                            }
+                            .content p {
+                                font-size: 2em;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="content">
+                            <p>Authentication failed. Please try again.</p>
+                        </div>
+                    </body>
+                </html>
+            `);
+            res.end();
+            
         }
     } catch (error) {
         console.error('Error authenticating student:', error);
@@ -139,17 +276,84 @@ async function authenticateTeacher(res, accessID, password) {
         const database = client.db('institution');
         const collection = database.collection('teachers');
 
-        // Change the query to check for accessID and password
         const teacher = await collection.findOne({ accessID, password });
 
         if (teacher) {
             console.log('Teacher authenticated successfully');
-            res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end('Teacher authenticated successfully');
+            res.writeHead(200, { 'Content-Type': 'html' });
+            res.write(`
+                <html>
+                    <head>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+                            
+                            body {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                margin: 0;
+                                background-color: #e3f2fd;
+                                font-family: 'Open Sans', sans-serif;
+                            }
+                            .content {
+                                text-align: center;
+                                color: #0d47a1;
+                            }
+                            .content p {
+                                font-size: 2em;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="content">
+                            <p>Teacher authenticated successfully.</p>
+                        </div>
+                    </body>
+                </html>
+            `);
+            res.end();
+            
         } else {
             console.log('Authentication failed for teacher');
-            res.writeHead(401, { 'Content-Type': 'text/plain' });
-            res.end('Authentication failed');
+            res.writeHead(401, { 'Content-Type': 'html' });
+            res.write(`
+                <html>
+                    <head>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+                            
+                            body {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                margin: 0;
+                                background-color: #ffebee; /* Light red background */
+                                font-family: 'Open Sans', sans-serif;
+                            }
+                            .content {
+                                text-align: center;
+                                color: #c62828; /* Dark red color */
+                            }
+                            .content p {
+                                font-size: 2em;
+                                font-weight: 600;
+                                margin: 0;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="content">
+                            <p>Authentication failed. Please try again.</p>
+                        </div>
+                    </body>
+                </html>
+            `);
+            res.end();
+            
         }
     } catch (error) {
         console.error('Error authenticating teacher:', error);

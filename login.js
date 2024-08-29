@@ -15,5 +15,5 @@ function set(path, formId, event) {
     event.preventDefault(); // Prevent default form submission behavior
     const form = document.getElementById(formId);
     form.action = 'http://localhost:3000' + path;
-    form.submit(); // Submit the form after setting the action
+    form.submit(); 
 }
